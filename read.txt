@@ -1,0 +1,348 @@
+8. 引用
+> 这是一段引用内容。
+
+效果：
+
+这是一段引用内容。
+
+例如：
+
+> Solve it once, document it forever.
+9. 分割线
+
+写三个短横线：
+
+---
+
+效果：
+
+很适合把不同章节隔开。
+
+10. 链接
+[GitHub](https://github.com)
+
+比如：
+
+[NVIDIA Documentation](https://docs.nvidia.com/)
+11. 图片
+![图片说明](图片地址)
+
+例如：
+
+![screenshot](images/example.png)
+
+如果图片就在仓库里，推荐这样组织：
+
+daily-technotes/
+├── README.md
+├── images/
+│   └── gpu-monitor.png
+└── cuda-gpu/
+
+然后写：
+
+![GPU Monitor](images/gpu-monitor.png)
+12. 表格
+
+这是你问到的重点。
+
+基本格式：
+
+| 项目 | 内容 | 说明 |
+|---|---|---|
+| OS | Ubuntu 24.04 | 操作系统 |
+| Python | 3.11 | Python 版本 |
+| CUDA | 12.8 | CUDA 版本 |
+
+效果：
+
+项目	内容	说明
+OS	Ubuntu 24.04	操作系统
+Python	3.11	Python 版本
+CUDA	12.8	CUDA 版本
+
+表格非常适合写“环境信息”。
+
+例如：
+
+## 环境
+
+| 项目 | 版本 |
+|---|---|
+| OS | Ubuntu 24.04 |
+| Python | 3.11 |
+| Conda | 25.x |
+| CUDA | 12.8 |
+| GPU | NVIDIA RTX 4090 |
+13. 表格对齐
+
+左对齐：
+
+| 名称 | 说明 |
+|:---|:---|
+| CUDA | GPU 计算 |
+
+居中：
+
+| 名称 | 说明 |
+|:---:|:---:|
+| CUDA | GPU 计算 |
+
+右对齐：
+
+| 名称 | 版本 |
+|---:|---:|
+| Python | 3.11 |
+14. 可折叠内容
+
+GitHub 支持 HTML 的 <details>。
+
+这个非常适合 README 里放长日志。
+
+<details>
+<summary>点击展开报错信息</summary>
+
+```text
+这里放很长的报错日志
+</details> ```
+
+例如：
+
+<details>
+<summary>查看完整报错</summary>
+
+Permission denied
+
+No such file or directory
+
+</details>
+
+这样页面会更整洁。
+
+15. 换行
+
+Markdown 有时候直接回车不会按你想象的方式换行。
+
+最简单的方法是中间空一行：
+
+第一段。
+
+第二段。
+
+或者使用：
+
+<br>
+
+例如：
+
+第一行<br>
+第二行
+16. 高亮路径、命令、参数
+
+你的技术笔记里特别推荐这种写法：
+
+配置文件：
+
+`~/.config/ghostty/config`
+
+执行：
+
+```bash
+ghostty +show-config
+
+参数 -l 5 表示每隔 5 秒刷新。
+
+
+原则可以记成：
+
+**短内容用单反引号，长代码用三反引号。**
+
+---
+
+## 17. 文件目录树
+
+你以后 README 里经常会用：
+
+````markdown
+```text
+daily-technotes/
+├── README.md
+├── linux/
+├── conda/
+├── cuda-gpu/
+└── templates/
+
+效果：
+
+```text
+daily-technotes/
+├── README.md
+├── linux/
+├── conda/
+├── cuda-gpu/
+└── templates/
+```
+
+---
+
+## 18. Emoji
+
+GitHub README 里可以直接用 Emoji：
+
+```markdown
+## 📚 Contents
+
+## 🐧 Linux
+
+## 🐍 Python
+
+## 🚀 CUDA / GPU
+
+## 📝 Notes
+
+## ⚠️ 注意事项
+
+## ✅ 解决方案
+```
+
+适量使用会让 README 清晰很多。
+
+---
+
+## 19. 锚点跳转
+
+你可以做一个目录。
+
+比如：
+
+```markdown
+## Contents
+
+- [Linux](#linux)
+- [CUDA](#cuda)
+- [Conda](#conda)
+```
+
+下面对应：
+
+```markdown
+## Linux
+
+## CUDA
+
+## Conda
+```
+
+GitHub 会自动生成标题锚点。
+
+中文标题也可以用，但如果你想长期维护，我建议一级分类尽量用英文或英文+中文。
+
+---
+
+## 20. 混合使用 HTML
+
+GitHub Markdown 还支持部分 HTML。
+
+例如居中：
+
+```html
+<div align="center">
+
+# Daily Tech Notes
+
+记录日常技术问题与解决方案
+
+</div>
+```
+
+图片控制大小：
+
+```html
+<img src="images/test.png" width="600">
+```
+
+不过日常笔记建议还是以 Markdown 为主，HTML 只在需要特殊排版时用。
+
+---
+
+## 21. 你这种技术知识库最推荐的文章模板
+
+以后每一篇问题记录可以固定成：
+
+````markdown
+# 问题标题
+
+## 1. 问题描述
+
+执行：
+
+```bash
+command
+```
+
+报错：
+
+```text
+error message
+```
+
+---
+
+## 2. 环境
+
+| 项目 | 版本 |
+|---|---|
+| OS | Ubuntu 24.04 |
+| Python | 3.11 |
+| CUDA | 12.8 |
+
+---
+
+## 3. 原因
+
+问题原因说明。
+
+---
+
+## 4. 解决方法
+
+执行：
+
+```bash
+command
+```
+
+参数说明：
+
+- `-a`：xxx
+- `-b`：xxx
+
+---
+
+## 5. 验证
+
+```bash
+command
+```
+
+结果：
+
+```text
+success
+```
+
+---
+
+## 6. 总结
+
+**最终解决方法：**
+
+```bash
+command
+```
+
+---
+
+## 7. References
+
+- [官方文档](https://example.com)
