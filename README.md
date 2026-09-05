@@ -119,6 +119,8 @@ git pull
 # 上传 GitHub
 git push
 ```
+#### Git流程圖
+![Git workflow](images/git-workflow.png)
 
 ### 二、配置Git用戶信息
 2. Git 重新完整配置
