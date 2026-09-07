@@ -116,10 +116,10 @@ git switch main
 git remote -v
 
 假设显示：
-```text
+
 origin  git@github.com:yfkust/project-A.git (fetch)
 origin  git@github.com:yfkust/project-A.git (push)
-```
+
 
 那么：git push origin main
 就会推到project-A
@@ -151,11 +151,10 @@ git push github1 main
 或者：
 
 git push github2 main
-# 
 
 # 拉取 GitHub(这个是拉取仓库到本地)
 git pull
-```
+
 
 # 上传 GitHub
 git push
