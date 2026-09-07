@@ -111,17 +111,15 @@ git switch -c 分支名
 # 切换分支
 git switch main
 
-```text
 # 查看当前绑定的远程仓库
 git remote -v
 
 假设显示：
-
 origin  git@github.com:yfkust/project-A.git (fetch)
 origin  git@github.com:yfkust/project-A.git (push)
 
-
-那么：git push origin main
+那么：
+git push origin main
 就会推到project-A
 
 如果想改成别的仓库，例如：git@github.com:yfkust/project-B.git
@@ -136,20 +134,16 @@ git push -u origin main
 也可以同时绑定多个 GitHub 仓库
 
 例如：
-
 git remote add github1 git@github.com:yfkust/project-A.git
 git remote add github2 git@github.com:yfkust/project-B.git
 
 查看：
-
 git remote -v
 
 之后你可以手动决定：
-
 git push github1 main
 
 或者：
-
 git push github2 main
 
 # 拉取 GitHub(这个是拉取仓库到本地)
