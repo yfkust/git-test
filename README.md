@@ -147,7 +147,14 @@ git push github1 main
 git push github2 main
 
 # 拉取 GitHub(这个是拉取仓库到本地)
-git pull
+git pull --rebase origin main
+
+## 查看本地和远程差异：
+git fetch origin
+git log --online --graph --decorate --all -10
+
+或者直接
+git st
 
 
 # 上传 GitHub
